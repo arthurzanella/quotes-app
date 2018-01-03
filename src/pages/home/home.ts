@@ -19,7 +19,7 @@ export class HomePage {
 
   ionViewDidLoad(){
 		this.quote = [];
-	  this.http.get('http://104.196.41.205/api/quote').toPromise()
+	  this.http.get('http://quotes.grzs.us/api/quote').toPromise()
 	  	.then((response) => {
 	    	this.quote = response.json();
 	    	console.log(response.json());
@@ -27,7 +27,7 @@ export class HomePage {
   }
 
   random(){
-	  this.http.get('http://104.196.41.205/api/quote').toPromise()
+	  this.http.get('http://quotes.grzs.us/api/quote').toPromise()
 	  	.then((response) => {
 	    	this.quote = response.json();
 	    	console.log(response.json());
